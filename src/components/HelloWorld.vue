@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import {} from "telegram-webapps";
 import { onMounted } from "vue";
 import { ref } from "vue";
 
@@ -21,7 +20,7 @@ tele.MainButton.onClick(() => {
 });
 console.log(tele);
 
-// tele.HapticFeedback.impactOccured("medium");
+tele.HapticFeedback.impactOccured("medium");
 
 tele.MainButton.show();
 </script>
