@@ -1,10 +1,14 @@
 <script setup lang="ts">
 import {} from "telegram-webapps-types";
+import { onMounted } from "vue";
 // import { ref } from "vue";
 
 const tele = Telegram.WebApp;
 
-console.log(tele);
+onMounted(() => {
+  tele.ready();
+}),
+  console.log(tele);
 </script>
 
 <template>TestWebApp</template>
