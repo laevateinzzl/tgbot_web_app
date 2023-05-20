@@ -2,14 +2,18 @@ lockfileVersion: 5.4
 
 specifiers:
   '@vitejs/plugin-vue': ^4.1.0
+  telegram-webapps: ^0.0.4
   telegram-webapps-types: ^1.0.5
+  telegram-webapps-types-new: ^1.0.2
   typescript: ^5.0.2
   vite: ^4.3.2
   vue: ^3.2.47
   vue-tsc: ^1.4.2
 
 dependencies:
+  telegram-webapps: 0.0.4
   telegram-webapps-types: 1.0.5
+  telegram-webapps-types-new: 1.0.2
   vue: 3.3.2
 
 devDependencies:
@@ -496,8 +500,16 @@ packages:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
     engines: {node: '>=0.10.0'}
 
+  /telegram-webapps-types-new/1.0.2:
+    resolution: {integrity: sha512-FAQyquV3hwRp5YoFy6BAnyzP84/2c7iIxVz2SEW+rVWD3p0xeoTJ7pjXNrCo8CFOAk6inWDgUcwxKwiQAdxTWQ==}
+    dev: false
+
   /telegram-webapps-types/1.0.5:
     resolution: {integrity: sha512-QLBBjEgdGdJZmnSshq2jVUrqwolRBiM7e0YPsUpHOFxA2W9nkUYI5yBFd3vGyCqFlNoJw8S6k2Q7lxVffzUwlw==}
+    dev: false
+
+  /telegram-webapps/0.0.4:
+    resolution: {integrity: sha512-ttKavgnoHDhWXpFVIbiJTCI+jO2dUeoXTj8VfowcPqBVjrxsZiGb8bcT6jpSEhUVRq6l0h/z5PsT9QZdvI1EPg==}
     dev: false
 
   /to-fast-properties/2.0.0:
