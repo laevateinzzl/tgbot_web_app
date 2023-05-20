@@ -8,6 +8,8 @@ const tele = Telegram.WebApp;
 const count = ref(0);
 
 const ua = navigator.userAgent;
+
+const apiVersion = tele.version;
 onMounted(() => {
   tele.ready();
 });
@@ -19,7 +21,7 @@ tele.MainButton.onClick(() => {
 });
 console.log(tele);
 
-tele.HapticFeedback.impactOccured("medium");
+// tele.HapticFeedback.impactOccured("medium");
 
 tele.MainButton.show();
 </script>
@@ -31,6 +33,7 @@ tele.MainButton.show();
   </div>
   <div>
     {{ ua }}
+    api:{{ apiVersion }}
   </div>
 </template>
 
