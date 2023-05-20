@@ -10,12 +10,15 @@ const count = ref(0);
 const ua = navigator.userAgent;
 onMounted(() => {
   tele.ready();
-}),
-  (tele.MainButton.text = "add");
+});
+
+tele.MainButton.text = "add";
 
 tele.MainButton.onClick(() => {
   count.value++;
 });
+
+tele.MainButton.show();
 
 console.log(tele);
 </script>
