@@ -39,9 +39,13 @@ tele.showPopup({
   ],
 });
 
-tele.HapticFeedback.impactOccured("soft");
+tele.BackButton.show();
 
 tele.MainButton.show();
+
+tele.onEvent("mainButtonClicked", () => {
+  tele.sendData(count.value.toString());
+});
 </script>
 
 <template>
