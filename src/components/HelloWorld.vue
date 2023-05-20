@@ -7,9 +7,9 @@ const tele = Telegram.WebApp;
 
 const count = ref(0);
 
+const ua = navigator.userAgent;
 onMounted(() => {
   tele.ready();
-  alert(navigator.userAgent);
 }),
   console.log(tele);
 </script>
@@ -18,6 +18,9 @@ onMounted(() => {
   <div>TestWebApp</div>
   <div>
     <button @click="count++">count is: {{ count }}</button>
+  </div>
+  <div>
+    {{ ua }}
   </div>
 </template>
 
