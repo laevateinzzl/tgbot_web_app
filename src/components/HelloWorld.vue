@@ -17,12 +17,11 @@ tele.MainButton.text = "add";
 tele.MainButton.onClick(() => {
   count.value++;
 });
+console.log(tele);
 
 tele.HapticFeedback.impactOccured("medium");
 
 tele.MainButton.show();
-
-console.log(tele);
 </script>
 
 <template>
