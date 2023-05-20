@@ -33,10 +33,13 @@ tele.showPopup({
   title: "test",
   message: "test",
   buttons: [
+    { id: "2", text: "ok", type: "ok" },
     { id: "4", text: "cancel", type: "cancel" },
     { id: "5", text: "destructive", type: "destructive" },
   ],
 });
+
+tele.HapticFeedback.impactOccured("soft");
 
 tele.MainButton.show();
 </script>
