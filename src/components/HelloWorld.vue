@@ -7,7 +7,7 @@ const tele = Telegram.WebApp;
 console.log(tele);
 </script>
 
-<template></template>
+<template>TestWebApp</template>
 
 <style scoped>
 .read-the-docs {
