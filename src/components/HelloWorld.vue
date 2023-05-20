@@ -20,23 +20,23 @@ tele.MainButton.onClick(() => {
 });
 console.log(tele);
 
-tele.showPopup({
-  title: "test",
-  message: "test",
-  buttons: [
-    { id: "1", text: "default", type: "default" },
-    { id: "2", text: "ok", type: "ok" },
-    { id: "3", text: "close", type: "close" },
-  ],
-});
 // tele.showPopup({
 //   title: "test",
 //   message: "test",
 //   buttons: [
-//     { id: "4", text: "cancel", type: "cancel" },
-//     { id: "5", text: "destructive", type: "destructive" },
+//     { id: "1", text: "default", type: "default" },
+//     { id: "2", text: "ok", type: "ok" },
+//     { id: "3", text: "close", type: "close" },
 //   ],
 // });
+tele.showPopup({
+  title: "test",
+  message: "test",
+  buttons: [
+    { id: "4", text: "cancel", type: "cancel" },
+    { id: "5", text: "destructive", type: "destructive" },
+  ],
+});
 
 tele.MainButton.show();
 </script>
@@ -49,9 +49,6 @@ tele.MainButton.show();
   <div>
     {{ ua }}
     api:{{ apiVersion }}
-  </div>
-  <div>
-    {{ tele }}
   </div>
 </template>
 
