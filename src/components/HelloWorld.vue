@@ -15,9 +15,9 @@ onMounted(() => {
 
 tele.MainButton.text = "add";
 
-tele.MainButton.onClick(() => {
-  count.value++;
-});
+// tele.MainButton.onClick(() => {
+//   count.value++;
+// });
 console.log(tele);
 
 // tele.showPopup({
