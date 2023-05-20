@@ -45,6 +45,7 @@ tele.MainButton.show();
 
 tele.onEvent("mainButtonClicked", () => {
   tele.sendData(count.value.toString());
+  console.log("mainButtonClicked:", count.value);
 });
 </script>
 
