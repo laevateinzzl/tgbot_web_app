@@ -9,6 +9,7 @@ const count = ref(0);
 
 onMounted(() => {
   tele.ready();
+  alert(navigator.userAgent);
 }),
   console.log(tele);
 </script>
