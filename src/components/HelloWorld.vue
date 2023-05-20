@@ -27,10 +27,16 @@ tele.showPopup({
     { id: "1", text: "default", type: "default" },
     { id: "2", text: "ok", type: "ok" },
     { id: "3", text: "close", type: "close" },
-    { id: "4", text: "cancel", type: "cancel" },
-    { id: "5", text: "destructive", type: "destructive" },
   ],
 });
+// tele.showPopup({
+//   title: "test",
+//   message: "test",
+//   buttons: [
+//     { id: "4", text: "cancel", type: "cancel" },
+//     { id: "5", text: "destructive", type: "destructive" },
+//   ],
+// });
 
 tele.MainButton.show();
 </script>
