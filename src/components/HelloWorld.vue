@@ -38,21 +38,53 @@ const showPopup = () => {
   });
 };
 
-tele.onEvent("mainButtonClicked", () => {
-  tele.sendData(count.value.toString());
-  console.log("mainButtonClicked:", count.value);
-});
+const testHapticFeedbackImpactLight = () => {
+  tele.HapticFeedback.impactOccured("light");
+};
+const testHapticFeedbackImpactMedium = () => {
+  tele.HapticFeedback.impactOccured("medium");
+};
+const testHapticFeedbackImpactHeavy = () => {
+  tele.HapticFeedback.impactOccured("heavy");
+};
+const testHapticFeedbackImpactRigid = () => {
+  tele.HapticFeedback.impactOccured("rigid");
+};
+const testHapticFeedbackImpactSoft = () => {
+  tele.HapticFeedback.impactOccured("soft");
+};
+
+tele.onEvent("mainButtonClicked", () => {});
 </script>
 
 <template>
   <div>TestWebApp</div>
   <div>
-    {{ ua }}
-    api:{{ apiVersion }}
+    <div>
+      {{ ua }}
+    </div>
+    <div>api:{{ apiVersion }}</div>
   </div>
   <div>
     <Button type="primary" @click="count++">count is: {{ count }}</Button>
     <Button type="primary" @click="showPopup">测试弹窗</Button>
+  </div>
+  <div>
+    <Button type="primary" @click="testHapticFeedbackImpactLight"
+      >testHapticFeedbackImpactLight</Button
+    >
+    <Button type="primary" @click="testHapticFeedbackImpactMedium"
+      >testHapticFeedbackImpactMedium</Button
+    >
+    <Button type="primary" @click="testHapticFeedbackImpactHeavy"
+      >testHapticFeedbackImpactHeavy</Button
+    >
+    <Button type="primary" @click="testHapticFeedbackImpactRigid"
+      >testHapticFeedbackImpactRigid</Button
+    >
+    <Button type="primary" @click="testHapticFeedbackImpactSoft"
+      >testHapticFeedbackImpactSoft</Button
+    >
   </div>
 </template>
 
