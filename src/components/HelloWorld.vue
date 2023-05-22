@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted } from "vue";
 import { ref } from "vue";
-import { Button, Step, Steps } from "vant";
+import { Button } from "vant";
 
 const tele = Telegram.WebApp;
 
@@ -10,8 +10,6 @@ const count = ref(0);
 // const ua = navigator.userAgent;
 
 const apiVersion = tele.version;
-
-const active = ref(1);
 
 onMounted(() => {
   tele.ready();
@@ -50,14 +48,7 @@ tele.onEvent("mainButtonClicked", () => {});
     <Button type="primary" @click="count++">count is: {{ count }}</Button>
     <Button type="primary" @click="showPopup">测试弹窗</Button>
   </div>
-  <div>
-    <Steps :active="active">
-      <Step>买家下单</Step>
-      <Step>商家接单</Step>
-      <Step>买家提货</Step>
-      <Step>交易完成</Step>
-    </Steps>
-  </div>
+  <div></div>
 </template>
 
 <style scoped>
