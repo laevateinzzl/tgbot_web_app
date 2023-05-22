@@ -7,9 +7,11 @@ const tele = Telegram.WebApp;
 
 const count = ref(0);
 
-const ua = navigator.userAgent;
+// const ua = navigator.userAgent;
 
 const apiVersion = tele.version;
+
+const active = ref(1);
 
 onMounted(() => {
   tele.ready();
@@ -43,13 +45,18 @@ tele.onEvent("mainButtonClicked", () => {});
 
 <template>
   <div>TestWebApp</div>
-  <div>
-    {{ ua }}
-    api:{{ apiVersion }}
-  </div>
+  <div>api:{{ apiVersion }}</div>
   <div>
     <Button type="primary" @click="count++">count is: {{ count }}</Button>
     <Button type="primary" @click="showPopup">测试弹窗</Button>
+  </div>
+  <div>
+    <van-steps :active="active">
+      <van-step>买家下单</van-step>
+      <van-step>商家接单</van-step>
+      <van-step>买家提货</van-step>
+      <van-step>交易完成</van-step>
+    </van-steps>
   </div>
 </template>
 
