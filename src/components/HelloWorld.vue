@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted } from "vue";
 import { ref } from "vue";
-import { Button } from "vant";
+import { Button, Step, Steps } from "vant";
 
 const tele = Telegram.WebApp;
 
@@ -51,12 +51,12 @@ tele.onEvent("mainButtonClicked", () => {});
     <Button type="primary" @click="showPopup">测试弹窗</Button>
   </div>
   <div>
-    <van-steps :active="active">
-      <van-step>买家下单</van-step>
-      <van-step>商家接单</van-step>
-      <van-step>买家提货</van-step>
-      <van-step>交易完成</van-step>
-    </van-steps>
+    <Steps :active="active">
+      <Step>买家下单</Step>
+      <Step>商家接单</Step>
+      <Step>买家提货</Step>
+      <Step>交易完成</Step>
+    </Steps>
   </div>
 </template>
 
