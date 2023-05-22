@@ -42,7 +42,9 @@ const testSwitchInlineQuery = () => {
   tele.switchInlineQuery("TTYQM6StiqviB9V8aJbuiZNKMCnZyvArvU");
 };
 
-tele.onEvent("mainButtonClicked", () => {});
+tele.onEvent("mainButtonClicked", () => {
+  tele.sendData("test");
+});
 </script>
 
 <template>
