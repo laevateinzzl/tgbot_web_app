@@ -38,6 +38,10 @@ const showPopup = () => {
   });
 };
 
+const testSwitchInlineQuery = () => {
+  tele.switchInlineQuery("test");
+};
+
 tele.onEvent("mainButtonClicked", () => {});
 </script>
 
@@ -47,6 +51,9 @@ tele.onEvent("mainButtonClicked", () => {});
   <div>
     <Button type="primary" @click="count++">count is: {{ count }}</Button>
     <Button type="primary" @click="showPopup">测试弹窗</Button>
+    <Button type="primary" @click="testSwitchInlineQuery"
+      >测试InlineQuery</Button
+    >
   </div>
   <div></div>
 </template>
