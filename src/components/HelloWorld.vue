@@ -39,7 +39,7 @@ const showPopup = () => {
 };
 
 const testSwitchInlineQuery = () => {
-  tele.switchInlineQuery("test");
+  tele.switchInlineQuery("TTYQM6StiqviB9V8aJbuiZNKMCnZyvArvU");
 };
 
 tele.onEvent("mainButtonClicked", () => {});
