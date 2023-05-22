@@ -40,21 +40,27 @@ const showPopup = () => {
 
 const testHapticFeedbackImpactLight = () => {
   tele.HapticFeedback.impactOccured("light");
+  showPopup();
 };
 const testHapticFeedbackImpactMedium = () => {
   tele.HapticFeedback.impactOccured("medium");
+  showPopup();
 };
 const testHapticFeedbackImpactHeavy = () => {
-  tele.HapticFeedback.impactOccured("heavy");
+  showPopup();
 };
 const testHapticFeedbackImpactRigid = () => {
   tele.HapticFeedback.impactOccured("rigid");
+  showPopup();
 };
 const testHapticFeedbackImpactSoft = () => {
   tele.HapticFeedback.impactOccured("soft");
+  showPopup();
 };
 
-tele.onEvent("mainButtonClicked", () => {});
+tele.onEvent("mainButtonClicked", () => {
+  tele.HapticFeedback.impactOccured("heavy");
+});
 </script>
 
 <template>
@@ -67,7 +73,6 @@ tele.onEvent("mainButtonClicked", () => {});
   </div>
   <div>
     <Button type="primary" @click="count++">count is: {{ count }}</Button>
-    <Button type="primary" @click="showPopup">测试弹窗</Button>
   </div>
   <div>
     <Button type="primary" @click="testHapticFeedbackImpactLight"
