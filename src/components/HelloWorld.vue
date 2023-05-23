@@ -55,6 +55,7 @@ const testShowConfirm = () => {
 
 const testClose = () => {
   tele.enableClosingConfirmation();
+  console.log(tele.isClosingConfirmationEnabled);
 };
 
 const testQrcode = (p: TelegramWebApps.ScanQrPopupParams) => {
