@@ -54,7 +54,12 @@ const testShowConfirm = () => {
 };
 
 const testClose = () => {
-  tele.enableClosingConfirmation();
+  if (tele.isClosingConfirmationEnabled) {
+    tele.disableClosingConfirmation();
+  } else {
+    tele.enableClosingConfirmation();
+  }
+
   console.log(tele.isClosingConfirmationEnabled);
 };
 
