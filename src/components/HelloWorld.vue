@@ -42,6 +42,12 @@ const testSwitchInlineQuery = () => {
   tele.switchInlineQuery("TTYQM6StiqviB9V8aJbuiZNKMCnZyvArvU");
 };
 
+const testShowConfirm = () => {
+  tele.showConfirm("test_show_confirm", (ok: boolean) => {
+    console.log(ok);
+  });
+};
+
 tele.onEvent("mainButtonClicked", () => {
   tele.sendData("test");
 });
@@ -56,6 +62,7 @@ tele.onEvent("mainButtonClicked", () => {
     <Button type="primary" @click="testSwitchInlineQuery"
       >测试InlineQuery</Button
     >
+    <Button type="primary" @click="testShowConfirm">测试Confirm</Button>
   </div>
   <div></div>
 </template>
