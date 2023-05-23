@@ -23,6 +23,12 @@ tele.MainButton.text = "add";
 console.log(tele);
 
 tele.BackButton.show();
+tele.BackButton.onClick(() => {
+  tele.close();
+});
+tele.enableClosingConfirmation = () => {
+  tele.showAlert("confirm close?", () => {});
+};
 
 tele.MainButton.show();
 
