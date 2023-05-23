@@ -26,9 +26,6 @@ tele.BackButton.show();
 tele.BackButton.onClick(() => {
   tele.close();
 });
-tele.enableClosingConfirmation = () => {
-  tele.showAlert("confirm close?", () => {});
-};
 
 tele.MainButton.show();
 
@@ -54,6 +51,10 @@ const testShowConfirm = () => {
   });
 };
 
+const testClose = () => {
+  tele.enableClosingConfirmation();
+};
+
 tele.onEvent("mainButtonClicked", () => {
   tele.sendData("test");
 });
@@ -69,6 +70,7 @@ tele.onEvent("mainButtonClicked", () => {
       >测试InlineQuery</Button
     >
     <Button type="primary" @click="testShowConfirm">测试Confirm</Button>
+    <Button type="primary" @click="testClose">测试Close</Button>
   </div>
   <div></div>
 </template>
