@@ -2,6 +2,8 @@
 import { onMounted } from "vue";
 import { ref } from "vue";
 import { Button } from "vant";
+import { TelegramWebApps } from "telegram-webapps";
+("telegram-webapps");
 
 const tele = Telegram.WebApp;
 
@@ -55,6 +57,13 @@ const testClose = () => {
   tele.enableClosingConfirmation();
 };
 
+const testQrcode = (p: TelegramWebApps.ScanQrPopupParams) => {
+  tele.showScanQrPopup(p, (data: string) => {
+    console.log(data);
+    return !data;
+  });
+};
+
 tele.onEvent("mainButtonClicked", () => {
   tele.sendData("test");
 });
@@ -71,6 +80,7 @@ tele.onEvent("mainButtonClicked", () => {
     >
     <Button type="primary" @click="testShowConfirm">测试Confirm</Button>
     <Button type="primary" @click="testClose">测试Close</Button>
+    <Button type="primary" @click="testQrcode">测试Qrcode</Button>
   </div>
   <div></div>
 </template>
