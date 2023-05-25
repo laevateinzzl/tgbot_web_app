@@ -95,7 +95,9 @@ tele.onEvent("mainButtonClicked", () => {
     <Button type="primary" @click="testQrcode">测试Qrcode</Button>
     <!-- <Button type="primary" @click="testTheme">测试theme</Button> -->
   </div>
-  <div></div>
+  <div>
+    {{ tele.initData }}
+  </div>
 </template>
 
 <style scoped>
