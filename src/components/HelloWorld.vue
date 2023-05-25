@@ -70,11 +70,10 @@ const testQrcode = (p: TelegramWebApps.ScanQrPopupParams) => {
   });
 };
 
-const testTheme = () => {
-  tele.onEvent("themeChanged", () => {
-    console.log(tele.colorScheme, tele.themeParams);
-  });
-};
+tele.onEvent("themeChanged", () => {
+  console.log("color_scheme", tele.colorScheme);
+  console.log("theme", tele.themeParams);
+});
 
 tele.onEvent("mainButtonClicked", () => {
   tele.sendData("test");
@@ -93,7 +92,7 @@ tele.onEvent("mainButtonClicked", () => {
     <Button type="primary" @click="testShowConfirm">测试Confirm</Button>
     <Button type="primary" @click="testClose">测试Close</Button>
     <Button type="primary" @click="testQrcode">测试Qrcode</Button>
-    <Button type="primary" @click="testTheme">测试theme</Button>
+    <!-- <Button type="primary" @click="testTheme">测试theme</Button> -->
   </div>
   <div></div>
 </template>
