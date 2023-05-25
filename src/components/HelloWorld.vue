@@ -22,7 +22,8 @@ tele.MainButton.text = "add";
 // tele.MainButton.onClick(() => {
 //   count.value++;
 // });
-console.log(tele);
+console.log(tele.initDataUnsafe);
+console.log(tele.initData);
 
 tele.BackButton.show();
 tele.BackButton.onClick(() => {
