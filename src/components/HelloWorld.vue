@@ -71,8 +71,8 @@ const testQrcode = (p: TelegramWebApps.ScanQrPopupParams) => {
 };
 
 const testTheme = () => {
-  tele.onEvent("themeChanged", (p1, p2) => {
-    console.log(p1, p2);
+  tele.onEvent("themeChanged", () => {
+    console.log(tele.colorScheme, tele.themeParams);
   });
 };
 
