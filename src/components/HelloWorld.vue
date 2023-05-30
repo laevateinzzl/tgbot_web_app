@@ -7,6 +7,8 @@ import { TelegramWebApps } from "telegram-webapps";
 
 const tele = Telegram.WebApp;
 
+// const t = window.Telegram.WebApp;
+
 const count = ref(0);
 
 // const ua = navigator.userAgent;
@@ -22,8 +24,9 @@ tele.MainButton.text = "add";
 // tele.MainButton.onClick(() => {
 //   count.value++;
 // });
-console.log(tele.initDataUnsafe);
-console.log(tele.initData);
+
+console.log(tele);
+// console.log(t);
 
 tele.BackButton.show();
 tele.BackButton.onClick(() => {
@@ -31,6 +34,11 @@ tele.BackButton.onClick(() => {
 });
 
 tele.MainButton.show();
+
+tele.onEvent("settingsButtonClicked", () => {
+  // tele.sendData("test");
+  console.log("settingsButtonClicked");
+});
 
 const showPopup = () => {
   tele.showPopup({
