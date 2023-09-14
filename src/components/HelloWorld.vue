@@ -1,11 +1,8 @@
 <script setup lang="ts">
-import * as Sentry from "@sentry/browser";
-
 // console.log("HelloWorld");
 // Sentry.captureException(new Error("test"));
 // undefinedFunction();
 // console.error("test sentry");
-fetch("https://taobao.com");
 </script>
 
 <template>
